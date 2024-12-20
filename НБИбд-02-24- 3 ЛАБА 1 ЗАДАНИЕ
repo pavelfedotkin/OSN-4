@@ -1,0 +1,29 @@
+def get_planet_by_distance(distance):
+    
+    planets = {
+        "Меркурий": 57.91,
+        "Венера": 108.2,
+        "Земля": 149.6,
+        "Марс": 227.9,
+        "Юпитер": 778.5,
+        "Сатурн": 1427,
+        "Уран": 2871,
+        "Нептун": 4497.1
+    }
+    
+    
+    for planet, dist in planets.items():
+        if distance == dist:
+            return planet
+    
+    return "Планета с таким расстоянием не найдена."
+
+
+try:
+    
+    distance = 108.2
+    planet_name = get_planet_by_distance(distance)
+    print(f"Планета: {planet_name}")
+except ValueError:
+    print("Пожалуйста, введите корректное число.")
+Планета: Венера ОТВЕТ 
